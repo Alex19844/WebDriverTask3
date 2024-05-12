@@ -125,7 +125,7 @@ namespace WebDriverTask3
 
             // Check the price is calculated
             string calculatedPrice = "$5,628.90";
-            System.Threading.Thread.Sleep(5000);
+            System.Threading.Thread.Sleep(5000); // Wait for price to calculate
             IWebElement priceElement = driver.FindElement(By.CssSelector("label.gt0C8e.MyvX5d.D0aEmf"));
             string actualPrice = priceElement.Text;
             Assert.That(actualPrice, Is.EqualTo(calculatedPrice));
